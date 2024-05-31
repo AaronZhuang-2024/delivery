@@ -7,7 +7,45 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-- name: text_box_1
-  properties: {}
-  type: TextBox
+- name: outlined_card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
   layout_properties: {slot: default}
+  components:
+  - name: label_1
+    properties: {text: 输入您要检索的案号}
+    type: Label
+    layout_properties: {grid_position: 'FWFNZT,UFUMWA MMAUHG,LMKAZS'}
+  - name: label_2
+    properties: {text: 输入开始页面}
+    type: Label
+    layout_properties: {grid_position: 'FWFNZT,UFUMWA WRQFPF,QPPSWT'}
+  - name: label_3
+    properties: {text: 输入结束页面}
+    type: Label
+    layout_properties: {grid_position: 'FWFNZT,UFUMWA SKDPUJ,BIPGDX'}
+  - name: text_box_1
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'FWFNZT,PTDQWZ SIGYFU,VBGGTZ'}
+  - name: text_box_2
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'FWFNZT,PTDQWZ AOXEFW,WAQWNY'}
+  - name: text_box_3
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'FWFNZT,PTDQWZ AITCXK,CRDUCR'}
+  - name: button_1
+    properties: {text: 点击即可开始搜索}
+    type: Button
+    layout_properties: {grid_position: 'IYDBJX,PTGRNC'}
+    event_bindings: {click: button_1_click}
+  - name: result_text
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'YKWXRV,GJWQXE'}
+- name: rich_text_1
+  properties: {content: 公告送达检索器}
+  type: RichText
+  layout_properties: {slot: title}

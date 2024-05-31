@@ -1,12 +1,29 @@
-allow_embedding: false
-package_name: M3_App_1
-name: M3 App 1
-startup_form: Form1
-renamed: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+package_name: ______
+allow_embedding: false
+name: 公告送达检索
+runtime_options:
+  version: 2
+  client_version: '3'
+  server_version: python3-sandbox
+  server_spec: {base: python310-standard}
+  server_spec_disabled: {requirements: bs4==0.0.2, base: python310-standard}
+metadata: {title: 天河区人民法院公告送达检索器, description: 检索公告用}
+startup_form: Form1
+db_schema:
+  case_results:
+    client: none
+    server: full
+    columns:
+    - name: results
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: case_number
+      admin_ui: {order: 2, width: 200}
+      type: string
+    title: case_results
+renamed: true
